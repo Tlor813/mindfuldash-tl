@@ -7,6 +7,8 @@
   
   body {
     /*  center vertically and horizontally  */
+
+    font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,7 +16,9 @@
   }
   
   .bento-container {
-    background: #ccc;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
     width: 90%;
     max-width: 1200px;
     padding: 1rem;
@@ -23,44 +27,71 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
-  
+    border-radius: 1rem;
+    border: 1px;
+    border-color: white;
     /* optional. fixed aspect ratio   */
     /*   aspect-ratio: 16/9; */
   }
   
   .bento-item {
     background: gray;
-    padding: 1rem;
+    padding: 1.5rem;
   
     display: flex;
     justify-content: center;
     align-items: center;
-  
+    font-size: 1.5rem;
+    border: 2px solid ;
     /* ui to indicate interaction */
     cursor: pointer;
+    border-color: white;
   }
   
   .bento-item:hover {
-    background: orange;
+  
+    border: blur(5px);
+    transform: scale(1.02);
+    border-color: yellow;
   }
   
   /* Featured items */
   .feature-1 {
-    grid-column: span 1;
-    grid-row: span 1;
-    background: #fdf2f8;
+    grid-column: span 2;
+    grid-row: span 2;
+    background: #09b1ec;
+    border-radius: 1rem;
+    font-size: 3rem;
+    color: white;
   }
   
   .feature-2 {
     grid-column: span 1;
-    background: #f0fdf4;
+    background: #eff6ff;
+    border-radius: 1rem;
   }
   
   .feature-3 {
     grid-row: span 1;
-    background: #eff6ff;
+    background: #b0d6f5;
+    border-radius: 1rem;
   }
   
+  .feature-4 {
+    grid-row: span 1;
+    background: #eff6ff;
+    border-radius: 1rem;
+    grid-row: span 2;
+  }
+  .feature-5 {
+    grid-row: span 1;
+    background: #b0d6f5;
+    border-radius: 1rem;
+    
+  }
+
+
+
   /* Responsive "tablet" size */
   @media (max-width: 768px) {
     .bento-container {
