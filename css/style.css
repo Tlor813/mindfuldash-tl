@@ -1,4 +1,20 @@
+@import "https://unpkg.com/open-props";
 
+
+.feature-1:hover{
+
+    background: var(--gradient-22);
+    box-shadow: var(--inner-shadow-4);
+}
+
+
+
+.feature-2:hover{
+
+    background: var(--gradient-22);
+}
 
 
 /* temp background color */
+
+
